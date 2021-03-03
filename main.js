@@ -14,6 +14,11 @@ console.log('##### Challenge 1 #####');
 // Console out the numbers from 1-20, but only if they're divisible by 3.
 // Hint: Use `if` and a modulus operation.
 
+for(var i = 0; i < 20; i++){
+    if(i % 3 ===0)
+    console.log(i)
+}
+
 
 
 console.log('##### Challenge 2 #####');
@@ -21,6 +26,9 @@ console.log('##### Challenge 2 #####');
 //
 // Console out the numbers from 1-20. BACKWARDS.
 
+for(var i =20; i>=0; i-- ){
+    console.log(i)
+}
 
 
 console.log('##### Challenge 3 #####');
@@ -29,6 +37,10 @@ console.log('##### Challenge 3 #####');
 // For the string 'Boy howdy am I good at this!', console out the letters
 // individually.
 let string3 = 'Boy howdy am I good at this!';
+
+for(var i = 0; i < string3.length; i++){
+    console.log(string3[i])
+}
 
 
 
@@ -39,6 +51,11 @@ console.log('##### Challenge 4 #####');
 // character, print out every third character.
 let string4 = 'And getting better every day.';
 
+for(var i = 1; i < string4.length; i+=3){
+
+    console.log(string4[i])
+}
+
 
 
 console.log('##### Challenge 5 #####');
@@ -47,6 +64,12 @@ console.log('##### Challenge 5 #####');
 // For the string 'Am I the best?', console out the letters individually, AND
 // UPPERCASED.
 let string5 = 'Am I the best?';
+
+for(var i = 0; i < string5.length; i++){
+    console.log(string5[i].toUpperCase())
+}
+
+
 
 
 
@@ -57,6 +80,24 @@ console.log('##### Challenge 6 #####');
 // but also capitalize the letters in the third word.
 let string6 = 'Whoa, I am the best!';
 
+let arrOfStr = string6.split(" ")
+let MyArray = []
+for(const word of arrOfStr) {
+    if(word === arrOfStr[2]) {
+        MyArray.push(word.toUpperCase())
+    } else {
+        MyArray.push(word)
+    }
+
+}
+let MyArray2 = MyArray.join(" ")
+for(const L of MyArray2) {
+    
+    console.log(L)
+}
+    
+    
+
 
 
 console.log('##### Challenge 7 #####');
@@ -66,6 +107,10 @@ console.log('##### Challenge 7 #####');
 //  individually, but backwards. That is, the first console log should be
 // `.`, followed by `s`, followed by `d`, and so on.
 let string7 = 'I am become death, destroyer of worlds.';
+
+for(var i =string7.length - 1; i < string7.length; i-- ){
+    console.log(string7[i])
+}
 
 
 
@@ -83,5 +128,6 @@ const names = 'Alex|Mesuara|Brian|Chanel|Matt|Jeremy B.|Jose|Andy|Dustin|Joshua|
 // Don't print the pipes!
 
 
-
+var RealNames = "Here today is: " + names.split("|").join(" 'Here today is: '")
+console.log(RealNames)
 
