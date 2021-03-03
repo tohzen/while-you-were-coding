@@ -128,6 +128,14 @@ const names = 'Alex|Mesuara|Brian|Chanel|Matt|Jeremy B.|Jose|Andy|Dustin|Joshua|
 // Don't print the pipes!
 
 
-var RealNames = "Here today is: " + names.split("|").join(" 'Here today is: '")
-console.log(RealNames)
+// var RealNames = "Here today is: " + names.split("|").join(" 'Here today is: '")
+// console.log(RealNames)
+console.log("Here today is: ")
+for (const letter of names) {
+    if (letter === "|") {
+        console.log("Here today is: ")
+    } else {
+        console.log(letter)
+    }
+}
 
